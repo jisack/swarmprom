@@ -23,6 +23,8 @@ configs:
     file: ./prometheus/rules/host.rules.yml
   docker_container_rules:
     file: ./prometheus/rules/docker_container.rules.yml
+  prometheus_config:
+    file: ./prometheus/conf/prometheus.yml
 
 services:
   dockerd-exporter:
@@ -169,6 +171,8 @@ services:
         target: /etc/prometheus/host.rules.yml
       - source: docker_container_rules
         target: /etc/prometheus/docker_container.rules.yml
+      - source: prometheus_config
+        target: /etc/prometheus/prometheus.yml
     deploy:
       mode: replicated
       replicas: 1

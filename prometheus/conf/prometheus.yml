@@ -8,6 +8,8 @@ global:
 rule_files:
   - "swarm_node.rules.yml"
   - "swarm_task.rules.yml"
+  - "docker_container.rules.yml"
+  - "host.rules.yml"
 
 alerting:
   alertmanagers:

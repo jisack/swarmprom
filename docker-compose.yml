@@ -153,7 +153,7 @@ services:
           memory: 64M
 
   prometheus:
-    image: jisack/swprom:2.5.0
+    image: jisack/swprom
     networks:
       - net
     command:

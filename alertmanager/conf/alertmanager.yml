@@ -5,7 +5,7 @@ receivers:
     - name: 'slack'
       slack_configs:
           - send_resolved: true
-            text: "{{ .CommonAnnotations.description }}"
+            text: "summary: {{ .CommonAnnotations.summary }}\ndescription: {{ .CommonAnnotations.description }}"
             #username: <user>#
             #channel: <channel>#
             #api_url: <url>#

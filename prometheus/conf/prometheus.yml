@@ -3,7 +3,7 @@ global:
   evaluation_interval: 15s
 
   external_labels:
-    monitor: 'promswarm'
+    monitor: '20scoops_monitor'
 
 rule_files:
   - "swarm_node.rules.yml"
